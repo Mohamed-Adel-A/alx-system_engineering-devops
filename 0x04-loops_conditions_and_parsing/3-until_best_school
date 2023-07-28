@@ -3,7 +3,7 @@
 
 n=0
 
-until (( n = 10 ))
+until (( n == 10 ))
 do
   echo "Best School"
   (( n++ ))
