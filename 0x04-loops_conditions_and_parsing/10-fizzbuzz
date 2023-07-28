@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# displays Best School 100 times using while.
+
+n=1
+
+while (( n <= 100))
+do
+  if (( n % 3 == 0 && n % 5 == 0))
+  then
+    echo "FizzBuzz"
+  elif (( n % 3 == 0))
+  then
+    echo "Fizz"
+  elif (( n % 5 == 0))
+  then
+    echo "Buzz"
+  else
+    echo "Best School"
+  fi
+  (( n++ ))
+done
