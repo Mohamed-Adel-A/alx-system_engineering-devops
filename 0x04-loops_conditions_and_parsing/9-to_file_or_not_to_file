@@ -2,17 +2,17 @@
 # a Bash script that gives you information about the school file.
 
 filename=school
-if [ -e "school" ]
+if [ -f "school" ]
 then
   echo "school file exist"
-  if [ -s "school" ]
+  if [ -e "school" ]
   then
     echo "school file is not empty"
   else
     echo "school file is empty"
   fi
 
-  if [ -f "school" ]
+  if [ -s "school" ]
   then
     echo "school is a regular file"
   fi
