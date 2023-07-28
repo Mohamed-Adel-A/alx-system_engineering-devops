@@ -18,7 +18,11 @@ int infinite_while(void)
 	return (0);
 }
 
-
+/**
+ * main - main function
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	pid_t pid;
