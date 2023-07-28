@@ -15,7 +15,7 @@ do
   then
     echo "Buzz"
   else
-    echo "Best School"
+    echo "$n"
   fi
   (( n++ ))
 done
