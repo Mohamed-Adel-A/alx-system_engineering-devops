@@ -1,1 +1,31 @@
 https://i.imgur.com/zY3brqn.png
+
+- What is a server?
+A server is a computer program or device that provides a service to another computer program and its user, also known as the client.
+
+
+- What is the role of the domain name?
+a domain name is a string that identifies a realm of administrative autonomy, authority or control. 
+Domain names are often used to identify services provided through the Internet, such as websites, email services and more.
+
+
+- What type of DNS record www is in www.foobar.com?
+  CNAME DNS
+
+
+- What is the role of the web server ?
+The primary role of a web server is to store, process, and deliver requested information or webpages to end users.
+
+
+- What is the role of the application server? 
+An application server is a server that hosts applications or software that delivers a business application through a communication protocol. 
+
+
+- What is the role of the database?
+It organizes your database files and provides end users more access and control over their data.
+
+
+- What is the server using to communicate with the computer of the user requesting the website??
+web server. 
+The HTTP request includes information about the resource being requested, any additional data or parameters, and the method of the request.
+
