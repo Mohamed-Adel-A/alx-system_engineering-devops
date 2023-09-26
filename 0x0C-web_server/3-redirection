@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# configurea Ubuntu machine with Ngin-X
+# Configure your Nginx server so that /redirect_me
+# is redirecting to another page.
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
