@@ -24,6 +24,6 @@ sudo echo "
     balance roundrobin
     server 332352-web-01 100.25.12.89:80 check
     server 332352-web-02 54.234.129.228:80 check
-" | sudo tee /etc/haproxy/haproxy.cfg
+" | sudo tee -a /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
