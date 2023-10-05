@@ -36,6 +36,7 @@ defaults
 frontend www-http
 	bind *:80
 	reqadd X-Forwarded-Proto:\ http
+	http-request redirect scheme https code 301 unless { ssl_fc }
 	default_backend web_servers
 
 frontend www-https
