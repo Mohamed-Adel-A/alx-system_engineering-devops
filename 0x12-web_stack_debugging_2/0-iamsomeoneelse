@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# switch user and check the user
+
+sudo -u "$1" whoami
