@@ -22,7 +22,7 @@ if __name__ == "__main__":
     todo_data = todo_response.json()
 
     completed_todo = [todo.get("title")
-                      for todo in data
+                      for todo in todo_data
                       if todo.get("completed") == True]
 
     print("Employee {} is done with tasks({}/{}):"
