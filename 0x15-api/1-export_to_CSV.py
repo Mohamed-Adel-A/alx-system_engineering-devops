@@ -31,7 +31,7 @@ if __name__ == "__main__":
                       if todo.get("completed") is True]
 
     todo_list = [[t.get("userId"),
-                  user_data.get("name"),
+                  user_data.get("username"),
                   t.get("completed"),
                   t.get("title")]
                  for t in todo_data]
