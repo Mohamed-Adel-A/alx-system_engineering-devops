@@ -10,26 +10,25 @@ from sys import argv
 
 
 if __name__ == "__main__":
-     user_id = argv[2]
+    user_id = argv[2]
 
-    api_url = "https://jsonplaceholder.typicode.com/users/"
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(user_id)
     todo_url = user_url + "/todos/"
-    
+
     user_response = requests.get(user_url)
     user_data = user_response.json()
-    
+
     todo_response = requests.get(todo_url)
     todo_data = todo_response.json()
-    
+
     completed_todo = [todo.get("title")
                       for todo in data
                       if todo.get("completed") == True]
-    
+
     print("Employee {} is done with tasks({}/{}):"
           .format(user_data.get("name"),
                   len(completed_todo),
                   len(todo_data)))
-    
+
     for title in completed_todo:
         print("\t {}".format(title))
