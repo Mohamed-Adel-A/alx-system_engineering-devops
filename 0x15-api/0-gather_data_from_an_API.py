@@ -10,7 +10,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    user_id = argv[2]
+    user_id = argv[1]
 
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(user_id)
     todo_url = user_url + "/todos/"
