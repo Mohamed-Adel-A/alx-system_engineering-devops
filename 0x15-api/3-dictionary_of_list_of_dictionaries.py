@@ -31,7 +31,7 @@ if __name__ == "__main__":
         todo_response = requests.get(todo_url)
         todo_data = todo_response.json()
 
-        todo_list = [{"username": user_data.get("username"),
+        todo_list = [{"username": user.get("username"),
                       "task": t.get("title"),
                       "completed": t.get("completed")}
                      for t in todo_data]
