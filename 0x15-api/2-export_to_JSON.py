@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     todo_list = [{"task": t.get("title"),
                   "completed": t.get("completed"),
-                  "username" : user_data.get("username")}
+                  "username": user_data.get("username")}
                  for t in todo_data]
 
     todo_dict = dict()
