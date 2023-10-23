@@ -21,7 +21,7 @@ import requests
 if __name__ == "__main__":
 
     users_url = "https://jsonplaceholder.typicode.com/users"
-    users_response = requests.get(user_url)
+    users_response = requests.get(users_url)
     users_data = users_response.json()
 
     users_dict = dict()
