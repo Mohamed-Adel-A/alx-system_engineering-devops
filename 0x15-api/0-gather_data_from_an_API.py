@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     completed_todo = [todo.get("title")
                       for todo in todo_data
-                      if todo.get("completed") == True]
+                      if todo.get("completed") is True]
 
     print("Employee {} is done with tasks({}/{}):"
           .format(user_data.get("name"),
