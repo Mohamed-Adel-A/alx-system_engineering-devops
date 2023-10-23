@@ -38,5 +38,5 @@ if __name__ == "__main__":
     filename = "{}.csv".format(user_id)
     with open(filename, 'w') as f:
         # using csv.writer method from CSV package
-        write = csv.writer(f, quoting=csv.QUOTE_ALL))
+        write = csv.writer(f, quoting=csv.QUOTE_ALL)
         write.writerows(todo_list)
