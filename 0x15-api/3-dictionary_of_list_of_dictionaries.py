@@ -35,7 +35,7 @@ if __name__ == "__main__":
                       "task": t.get("title"),
                       "completed": t.get("completed")}
                      for t in todo_data]
-  
+
         users_dict[str(user_id)] = todo_list
 
     filename = "todo_all_employees.json"
