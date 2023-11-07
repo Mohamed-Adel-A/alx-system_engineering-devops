@@ -13,7 +13,9 @@ def number_of_subscribers(subreddit):
     returns the number of subscribers for a given subreddit.
     """
     API_url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    response = requests.get(API_url, allow_redirects=False)
+    response = requests.get(API_url,
+                            header={"User-Agent": "Mozilla/5.0"},
+                            allow_redirects=False)
     if response.status_code == 404:
         return (0)
     subs_data = response.json().get("data").get("subscribers")
