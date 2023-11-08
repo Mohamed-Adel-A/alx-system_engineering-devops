@@ -20,6 +20,6 @@ def top_ten(subreddit):
     i = 0
     for post in posts_data:
         print(post.get("data").get('title'))
-        i++
+        i += 1
         if i == 10:
             break
