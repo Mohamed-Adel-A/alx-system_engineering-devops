@@ -28,12 +28,11 @@ def recurse(subreddit, hot_list=[], after=None):
         response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 allow_redirects=False)
-    if 'error' in response:
-        return(None)
+    if (response.status_code == 404):
+        return None
     json_data = (response.json()).get("data")
     after = json_data.get("after")
     posts_data = json_data.get("children")
-
     for post in posts_data:
         post_title = post.get("data").get("title")
         hot_list.append(post_title)
