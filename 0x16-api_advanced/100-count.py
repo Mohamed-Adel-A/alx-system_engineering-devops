@@ -42,7 +42,6 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
         if response.status_code == 404:
             raise Exception
     except Exception:
-        print("")
         return
     
     if (response.status_code == 404):
