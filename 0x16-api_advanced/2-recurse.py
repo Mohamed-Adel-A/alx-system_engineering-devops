@@ -25,7 +25,7 @@ def recurse(subreddit, hot_list=[], after=None):
                                 allow_redirects=False)
     if (response.status_code == 404):
         return None
-    json_data = response.json().get("data")
+    json_data = (response.json()).get("data")
     after = json_data.get("after")
     posts_data = json_data.get("children")
 
@@ -34,3 +34,4 @@ def recurse(subreddit, hot_list=[], after=None):
         hot_list.append(post_title)
     if after is None:
         return hot_list
+    return recurse(subreddit, hot_list, after)
