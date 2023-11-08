@@ -32,6 +32,7 @@ def recurse(subreddit, hot_list=[], after=None):
         return None
     json_data = (response.json()).get("data")
     after = json_data.get("after")
+    print(after)
     posts_data = json_data.get("children")
 
     for post in posts_data:
