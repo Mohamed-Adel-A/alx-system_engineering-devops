@@ -10,8 +10,7 @@ def top_ten(subreddit):
     """
     """
     API_url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    response = requests.get(API_url,
-                            allow_redirects=False)
+    response = requests.get(API_url, allow_redirects=False)
     if (response.status_code == 404):
         print("None")
         return
