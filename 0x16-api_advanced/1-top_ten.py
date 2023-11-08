@@ -14,6 +14,6 @@ def top_ten(subreddit):
     if (response.status_code == 404):
         print("None")
         return
-    posts_data = response.json().get("data").get('children')
+    posts_data = (response.json()).get("data").get('children')
     for post in posts_data:
         print(post.get("data").get('title'))
