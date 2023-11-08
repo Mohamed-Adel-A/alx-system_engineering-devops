@@ -14,7 +14,7 @@ def number_of_subscribers(subreddit):
     """
     API_url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     response = requests.get(API_url,
-                            header={"User-Agent": "Mozilla/5.0"},
+                            headers={"User-Agent": "Mozilla/5.0"},
                             allow_redirects=False)
     if response.status_code == 404:
         return (0)
