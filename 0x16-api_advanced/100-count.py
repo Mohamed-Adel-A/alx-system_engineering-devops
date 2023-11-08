@@ -48,6 +48,7 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
         title_words_list = post_title.lower().split()
         for word in word_list:
             if word.lower() in title_words_list:
+                print(word)
                 count = len([w for w in title_words_list if w == word.lower()])
                 if (words_count_dict.get(word)):
                     words_count_dict[word] += count
