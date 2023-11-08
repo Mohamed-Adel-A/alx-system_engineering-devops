@@ -54,7 +54,7 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
                     words_count_dict[word] = count
 
     if after:
-        return recurse(subreddit, word_list, after)
+        return count_words(subreddit, word_list, after)
 
     if not words_count_dict:
         print()
