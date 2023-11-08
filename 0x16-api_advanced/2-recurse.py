@@ -28,7 +28,6 @@ def recurse(subreddit, hot_list=[], after=None):
         response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 allow_redirects=False)
-    print(response.status_code)
     if (response.status_code >= 300):
         return None
     json_data = (response.json()).get("data")
