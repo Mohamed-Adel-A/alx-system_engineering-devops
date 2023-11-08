@@ -28,7 +28,7 @@ def recurse(subreddit, hot_list=[], after=None):
         response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 allow_redirects=False)
-    if 'error' in j_response:
+    if 'error' in response:
         return(None)
     json_data = (response.json()).get("data")
     after = json_data.get("after")
