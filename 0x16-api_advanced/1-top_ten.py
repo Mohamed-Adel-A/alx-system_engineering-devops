@@ -16,7 +16,7 @@ def top_ten(subreddit):
     response = requests.get(API_url,
                             headers={"User-Agent": "Mozilla/5.0"},
                             allow_redirects=False)
-    if (response.status_code == 404):
+    if (response.status_code >= 300):
         print("None")
         return
     json_data = response.json()
