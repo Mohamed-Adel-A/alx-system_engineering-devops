@@ -19,9 +19,6 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
     """
     if not after:
         API_url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-        params = {
-            "limit": 100
-        }
         response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 params=params,
@@ -31,7 +28,6 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
             subreddit, after)
         params = {
             "after": after,
-            "limit": 100
         }
         response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
