@@ -9,7 +9,7 @@ the function should return None.
 import requests
 
 
-def count_words(subreddit, word_list, words_count_dict={}, after=None):
+def count_words(subreddit, word_list, words_count_dict=dict(), after=None):
     """
     a recursive function that queries the Reddit API
     and returns a list containing the titles of
