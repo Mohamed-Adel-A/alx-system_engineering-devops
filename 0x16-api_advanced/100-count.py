@@ -37,7 +37,14 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 params=params,
                                 allow_redirects=False)
-    print(response.status_code)
+    try:
+        data = response.json()
+        if response.status_code == 404:
+            raise Exception
+    except Exception:
+        print("")
+        return
+    
     if (response.status_code == 404):
         return None
     json_data = (response.json()).get("data")
