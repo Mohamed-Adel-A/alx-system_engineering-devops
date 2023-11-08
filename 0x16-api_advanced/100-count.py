@@ -38,7 +38,7 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
             raise Exception
     except Exception:
         return
-    
+
     if (response.status_code == 404):
         return None
     json_data = (response.json()).get("data")
