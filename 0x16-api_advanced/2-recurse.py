@@ -17,13 +17,15 @@ def recurse(subreddit, hot_list=[], after=None):
     If no results are found for the given subreddit,
     the function should return None.
     """
-    API_url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     if after is None:
+        API_url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
         response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 allow_redirects=False)
     else:
-        response = requests.get(API_url + "?after={}".format(after),
+        API_url = "https://www.reddit.com/r/{}/hot.json?after={}".format(
+            subreddit, after)
+        response = requests.get(API_url,
                                 headers={"User-Agent": "Mozilla/5.0"},
                                 allow_redirects=False)
     if (response.status_code == 404):
@@ -35,6 +37,6 @@ def recurse(subreddit, hot_list=[], after=None):
     for post in posts_data:
         post_title = post.get("data").get("title")
         hot_list.append(post_title)
-    if after is None:
-        return hot_list
-    return recurse(subreddit, hot_list, after)
+    if after:
+        return recurse(subreddit, hot_list, after)
+    return hot_list
