@@ -17,8 +17,6 @@ def count_words(subreddit, word_list, words_count_dict={}, after=None):
     If no results are found for the given subreddit,
     the function should return None.
     """
-    print(word_list)
-    print(words_count_dict)
     if not after:
         API_url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
         params = {
