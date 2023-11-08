@@ -21,7 +21,7 @@ def recurse(subreddit, hot_list=[], after=None):
     if after is None:
         response = requests.get(API_url, allow_redirects=False)
     else:
-        response = requests.get(API_url+ "?after={}".format(after),
+        response = requests.get(API_url + "?after={}".format(after),
                                 allow_redirects=False)
     if (response.status_code == 404):
         return None
