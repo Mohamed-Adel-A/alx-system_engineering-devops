@@ -19,9 +19,12 @@ def recurse(subreddit, hot_list=[], after=None):
     """
     API_url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     if after is None:
-        response = requests.get(API_url, allow_redirects=False)
+        response = requests.get(API_url,
+                                headers={"User-Agent": "Mozilla/5.0"},
+                                allow_redirects=False)
     else:
         response = requests.get(API_url + "?after={}".format(after),
+                                headers={"User-Agent": "Mozilla/5.0"},
                                 allow_redirects=False)
     if (response.status_code == 404):
         return None
