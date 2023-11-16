@@ -7,5 +7,5 @@ exec {'restart nginx':
 
 exec { 'nginx':
   command => 'nginx -s stop && nginx',
-  path    => ['/bin', '/usr/bin', '/usr/sbin']
+  path    => '/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin',
 }
