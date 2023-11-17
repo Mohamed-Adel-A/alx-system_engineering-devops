@@ -18,10 +18,10 @@ location /redirect_me {
 }
 
 
-location /airbnb-onepage/ {
-              include proxy_params;
-              proxy_pass http://0.0.0.0:8000/;
-            }
+    location /airbnb-onepage {
+        include proxy_params;
+        proxy_pass http://0.0.0.0:5000;
+    }
         #
         # Note: You should disable gzip for SSL traffic.
         # See: https://bugs.debian.org/773332
